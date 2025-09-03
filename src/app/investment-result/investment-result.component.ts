@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { InvestmentResult } from '../shared/investment-result.model';
 import { CurrencyPipe } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { InvestmentResult } from '../shared/investment-result.model';
 
 @Component({
   selector: 'app-investment-result',
@@ -10,5 +10,5 @@ import { CurrencyPipe } from '@angular/common';
   styleUrl: './investment-result.component.css'
 })
 export class InvestmentResultComponent {
-  @Input() results?: InvestmentResult[];
+  results = input<InvestmentResult[]>();
 }
